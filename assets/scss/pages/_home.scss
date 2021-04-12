@@ -10,6 +10,10 @@
 
   @include flex-between(row);
 
+  .navbar-items {
+    @include flex-between(row);
+  }
+
   .logo-container {
     padding-left: 1rem;
 
@@ -98,6 +102,10 @@
           margin-right: 0.4rem;
         }
 
+        &:hover {
+          color: $white;
+        }
+
         .post-btn {
           background-color: $primary-color;
           color: $white;
@@ -115,8 +123,86 @@
     }
   }
 
+  .user-details-main-container {
+    display: none;
+    align-items: center;
+
+    .messages {
+      @include flex-center(row);
+
+      i {
+        font-size: 2rem;
+        color: $primary-color;
+      }
+
+      .message-badge {
+        right: -7px;
+        position: absolute;
+        top: 0;
+
+        @include flex-center(row);
+
+        width: 18px;
+        height: 18px;
+        border: 1px solid $dark;
+        border-radius: 50%;
+        background-color: $primary-color;
+        font-size: 0.6rem;
+        font-weight: bold;
+        color: $white;
+      }
+
+      position: relative;
+    }
+
+    .user {
+      @include flex-center(row);
+
+      margin-left: 20px;
+      color: $white;
+
+      .user-name {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+
+      .user-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
   @include media-queries($tablet) {
-    justify-content: center;
+    justify-content: space-between;
+
+    .navbar-items {
+      margin-left: 1rem;
+    }
+
+    .user-details-main-container {
+      display: flex;
+      margin-right: 1rem;
+    }
+  }
+
+  @include media-queries($laptop) {
+    justify-content: space-between;
+
+    .navbar-items {
+      margin-left: 5rem;
+    }
+
+    .user-details-main-container {
+      margin-right: 5rem;
+    }
   }
 }
 
@@ -433,12 +519,8 @@
               height: 15rem;
             }
 
-            @include media-queries($laptop) {
-              height: 18rem;
-            }
-
             @include media-queries($desktop) {
-              height: 20rem;
+              height: 17rem;
             }
 
             @include flex-center(row);
@@ -513,6 +595,391 @@
           }
         }
       }
+
+      @include media-queries($desktop) {
+        width: 93%;
+      }
+    }
+  }
+}
+
+.hot-ads-main-container {
+  background-color: $white;
+  display: flex;
+  width: 100%;
+  border-bottom: $border;
+  flex-direction: column;
+  position: relative;
+
+  .hot-ads-header {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    .hot-title {
+      @include title($dark);
+
+      color: rgba($color: $dark, $alpha: 0.6);
+      font-size: 16px;
+    }
+  }
+
+  .hot-add-content-area {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    display: flex;
+    align-items: flex-start;
+    height: 200px;
+    margin-bottom: 30px;
+    position: relative;
+
+    .image-wrapper {
+      width: 260px;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+
+      .hot-control-btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+
+        @include flex-center(row);
+
+        .controls {
+          @include flex-center(row);
+
+          width: 60px;
+          height: 25px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+          .left {
+            width: 30px;
+            height: 25px;
+            color: $white;
+            cursor: pointer;
+            border-right: 1px solid $dark;
+
+            @include flex-center(row);
+
+            background-color: $primary-color;
+          }
+
+          .right {
+            width: 30px;
+            height: 25px;
+            color: $white;
+            cursor: pointer;
+
+            @include flex-center(row);
+
+            background-color: $primary-color;
+          }
+        }
+      }
+
+      div {
+        width: 300px;
+        height: 200px;
+
+        .hot-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .hot-ad-details {
+      flex: 1;
+      padding-left: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .hot-title-detail {
+        margin: 0;
+        color: $primary-color;
+        /* stylelint-disable */
+        font-family: "Helvetica Neue LT Bold";
+        /* stylelint-enable */
+        font-size: 20px;
+      }
+
+      .hot-details {
+        font-size: 18px;
+        margin: 5px 0;
+        line-height: 1.2;
+        margin-top: 4px;
+        color: lighten($dark, 50%);
+        font-weight: 400;
+      }
+
+      .hot-author {
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.5;
+        margin-top: 0.3rem;
+
+        strong {
+          /* stylelint-disable */
+          font-family: "Helvetica Neue LT Medium";
+          /* stylelint-enable */
+          margin-right: 5px;
+        }
+      }
+
+      .hot-location {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: bold;
+
+        strong {
+          margin-right: 5px;
+          /* stylelint-disable */
+          font-family: "Helvetica Neue LT Medium";
+          /* stylelint-enable */
+        }
+      }
+
+      .hot-btn-container {
+        display: flex;
+        /* stylelint-disable */
+        font-family: "Helvetica Neue LT Medium";
+        /* stylelint-enable */
+
+        .hot-price {
+          background-color: $primary-color;
+          border-right: 1px solid $dark;
+          padding: 0.5rem 1.5rem;
+          color: $white;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: lighten($primary-color, 5%);
+          }
+
+          @include flex-center(row);
+        }
+
+        .hot-purchase {
+          padding: 0.5rem 1.5rem;
+          color: $white;
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: lighten($primary-color, 5%);
+          }
+
+          .bi-cart-fill {
+            margin-right: 10px;
+          }
+
+          @include flex-center(row);
+
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .hot-arrows-controls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    @include flex-between(row);
+
+    .left-control {
+      margin-left: 4rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 0.1rem solid $primary-color;
+      cursor: pointer;
+      z-index: 999;
+
+      .icon {
+        font-weight: bold;
+        color: $primary-color;
+        font-size: 20px;
+      }
+
+      @include flex-center(row);
+    }
+
+    .right-control {
+      margin-right: 4rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 0.1rem solid $primary-color;
+      cursor: pointer;
+      z-index: 999;
+
+      .icon {
+        font-weight: bold;
+        color: $primary-color;
+        font-size: 20px;
+      }
+
+      @include flex-center(row);
+    }
+
+    @media screen and(max-width: 900px) {
+      .left-control {
+        margin-left: 1rem;
+      }
+
+      .right-control {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  @media screen and(max-width: 900px) {
+    .hot-ads-header {
+      margin-left: 5rem;
+      margin-right: 5rem;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .hot-add-content-area {
+      margin-left: 5rem;
+      margin-right: 5rem;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .hot-ads-header {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .hot-add-content-area {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    .hot-ad-details {
+      .hot-btn-container {
+        .hot-price {
+          padding: 0.3rem 1.2rem;
+        }
+
+        .hot-purchase {
+          padding: 0.2rem 1.2rem;
+
+          .bi-cart-fill {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    .hot-add-content-area {
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+
+      .image-wrapper {
+        width: 260px;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        .hot-control-btn {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+
+          @include flex-center(row);
+
+          .controls {
+            @include flex-center(row);
+
+            width: 60px;
+            height: 25px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            .left {
+              width: 30px;
+              height: 25px;
+              color: $white;
+              cursor: pointer;
+              border-right: 1px solid $dark;
+
+              @include flex-center(row);
+
+              background-color: $primary-color;
+            }
+
+            .right {
+              width: 30px;
+              height: 25px;
+              color: $white;
+              cursor: pointer;
+
+              @include flex-center(row);
+
+              background-color: $primary-color;
+            }
+          }
+        }
+
+        div {
+          width: 300px;
+          height: 200px;
+
+          .hot-img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .hot-ad-details {
+        padding-left: 0;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+      }
+
+      .hot-content {
+        display: flex;
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
     }
   }
 }
@@ -547,7 +1014,7 @@
 
       @include media-queries($tablet) {
         p {
-          font-size: 14px;
+          font-size: 16px;
         }
       }
       /* stylelint-enable */
@@ -570,8 +1037,28 @@
               font-size: 14px;
               color: darken($dark-light, 20%);
             }
+
+            &:hover {
+              i {
+                color: darken($dark-light, 20%);
+              }
+            }
           }
           /* stylelint-enable */
+        }
+      }
+
+      @include media-queries($tablet) {
+        ul {
+          li {
+            margin: 0 0.4rem;
+
+            a {
+              i {
+                font-size: 20px;
+              }
+            }
+          }
         }
       }
     }
@@ -669,6 +1156,7 @@
       display: flex;
       flex-direction: column;
       margin-right: 30px;
+      margin-bottom: 30px;
 
       .country-detail {
         @include flex-center(row);
@@ -745,146 +1233,6 @@
 
         .contry-contry {
           width: 6rem;
-        }
-      }
-    }
-  }
-}
-
-.hot-ads-main-container {
-  background-color: $white;
-  display: flex;
-  width: 100%;
-  border-bottom: $border;
-  flex-direction: column;
-
-  .hot-ads-header {
-    margin-left: 4.7rem;
-    margin-right: 4.7rem;
-
-    .hot-title {
-      @include title($dark);
-
-      color: rgba($color: $dark, $alpha: 0.6);
-      font-size: 16px;
-    }
-  }
-
-  .hot-add-content-area {
-    margin-left: 4.7rem;
-    margin-right: 4.7rem;
-    display: flex;
-    align-items: flex-start;
-    height: auto;
-    margin-bottom: 30px;
-
-    .image-wrapper {
-      width: 260px;
-      height: 100%;
-      overflow: hidden;
-
-      div {
-        width: 300px;
-        height: 100%;
-
-        .hot-img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-
-    .hot-ad-details {
-      flex: 1;
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      .hot-title-detail {
-        margin: 0;
-        color: $primary-color;
-        /* stylelint-disable */
-        font-family: "Helvetica Neue LT Bold";
-        /* stylelint-enable */
-        font-size: 20px;
-      }
-
-      .hot-details {
-        font-size: 14px;
-        margin: 0;
-        line-height: 1.2;
-        margin-top: 4px;
-        /* stylelint-disable */
-        font-family: "Helvetica Neue LT Medium";
-        /* stylelint-enable */
-        color: lighten($dark, 50%);
-        font-weight: 400;
-      }
-
-      .hot-author {
-        font-size: 14px;
-        margin: 0;
-        line-height: 1.5;
-        margin-top: 0.3rem;
-
-        strong {
-          /* stylelint-disable */
-          font-family: "Helvetica Neue LT Medium";
-          /* stylelint-enable */
-          margin-right: 5px;
-        }
-      }
-
-      .hot-location {
-        margin: 0;
-        font-size: 16px;
-        line-height: 1.5;
-        font-weight: bold;
-
-        strong {
-          margin-right: 5px;
-          /* stylelint-disable */
-          font-family: "Helvetica Neue LT Medium";
-          /* stylelint-enable */
-        }
-      }
-
-      .hot-btn-container {
-        display: flex;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        justify-self: flex-end;
-        /* stylelint-disable */
-        font-family: "Helvetica Neue LT Medium";
-        /* stylelint-enable */
-
-        .hot-price {
-          background-color: $primary-color;
-          border-right: 1px solid $dark;
-          padding: 0.5rem 1.5rem;
-          color: $white;
-          border-top-left-radius: 3px;
-          border-bottom-left-radius: 3px;
-          cursor: pointer;
-
-          @include flex-center(row);
-        }
-
-        .hot-purchase {
-          padding: 0.5rem 1.5rem;
-          color: $white;
-          border-top-right-radius: 3px;
-          border-bottom-right-radius: 3px;
-          cursor: pointer;
-
-          .bi-cart-fill {
-            margin-right: 10px;
-          }
-
-          @include flex-center(row);
-
-          background-color: $primary-color;
         }
       }
     }
