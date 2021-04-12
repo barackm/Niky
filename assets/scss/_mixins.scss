@@ -48,6 +48,12 @@
 
 // media queries 
 
+@mixin media-queries-max-width($screen) {
+    @media screen and(max-width: $screen) {
+        @content
+    } 
+}
+
 @mixin media-queries($screen) {
     @media screen and(min-width: $screen) {
         @content
