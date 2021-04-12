@@ -80,6 +80,11 @@
     li {
       padding: 0 0.7rem;
       /* stylelint-disable */
+
+      @include media-queries($desktop) {
+        padding: 0 1.2rem;
+      }
+
       a {
         color: lighten($dark-light, 20%);
         font-size: 0.8rem;
@@ -213,10 +218,13 @@
 
   @include media-queries($tablet) {
     .header-jumbotron {
-      height: 300px;
+      height: 270px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
 
       .jumbotron-content {
-        margin-top: 30px;
+        margin-bottom: 50px;
 
         .jumbo-title {
           font-size: 50px;
@@ -293,9 +301,48 @@
     }
   }
 
+  @include media-queries($desktop) {
+    .header-jumbotron {
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      .jumbotron-content {
+        margin-bottom: 50px;
+
+        .jumbo-title {
+          font-size: 50px;
+          margin-bottom: -1rem;
+        }
+
+        .jumbotron-inputs {
+          width: 80%;
+
+          @include flex-center(row);
+
+          .categories-header {
+            height: 2.4rem;
+          }
+
+          .search-one-header {
+            height: 2.4rem;
+          }
+
+          .search-two-header {
+            height: 2.4rem;
+          }
+
+          .submit-btn-header {
+            height: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+
   .products-main-area {
     width: 100%;
-    margin-top: 50px;
 
     @include flex-center(column);
 
@@ -497,6 +544,12 @@
           color: $primary-color;
         }
       }
+
+      @include media-queries($tablet) {
+        p {
+          font-size: 14px;
+        }
+      }
       /* stylelint-enable */
     }
 
@@ -692,6 +745,146 @@
 
         .contry-contry {
           width: 6rem;
+        }
+      }
+    }
+  }
+}
+
+.hot-ads-main-container {
+  background-color: $white;
+  display: flex;
+  width: 100%;
+  border-bottom: $border;
+  flex-direction: column;
+
+  .hot-ads-header {
+    margin-left: 4.7rem;
+    margin-right: 4.7rem;
+
+    .hot-title {
+      @include title($dark);
+
+      color: rgba($color: $dark, $alpha: 0.6);
+      font-size: 16px;
+    }
+  }
+
+  .hot-add-content-area {
+    margin-left: 4.7rem;
+    margin-right: 4.7rem;
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    margin-bottom: 30px;
+
+    .image-wrapper {
+      width: 260px;
+      height: 100%;
+      overflow: hidden;
+
+      div {
+        width: 300px;
+        height: 100%;
+
+        .hot-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .hot-ad-details {
+      flex: 1;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .hot-title-detail {
+        margin: 0;
+        color: $primary-color;
+        /* stylelint-disable */
+        font-family: "Helvetica Neue LT Bold";
+        /* stylelint-enable */
+        font-size: 20px;
+      }
+
+      .hot-details {
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.2;
+        margin-top: 4px;
+        /* stylelint-disable */
+        font-family: "Helvetica Neue LT Medium";
+        /* stylelint-enable */
+        color: lighten($dark, 50%);
+        font-weight: 400;
+      }
+
+      .hot-author {
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.5;
+        margin-top: 0.3rem;
+
+        strong {
+          /* stylelint-disable */
+          font-family: "Helvetica Neue LT Medium";
+          /* stylelint-enable */
+          margin-right: 5px;
+        }
+      }
+
+      .hot-location {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: bold;
+
+        strong {
+          margin-right: 5px;
+          /* stylelint-disable */
+          font-family: "Helvetica Neue LT Medium";
+          /* stylelint-enable */
+        }
+      }
+
+      .hot-btn-container {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        justify-self: flex-end;
+        /* stylelint-disable */
+        font-family: "Helvetica Neue LT Medium";
+        /* stylelint-enable */
+
+        .hot-price {
+          background-color: $primary-color;
+          border-right: 1px solid $dark;
+          padding: 0.5rem 1.5rem;
+          color: $white;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+          cursor: pointer;
+
+          @include flex-center(row);
+        }
+
+        .hot-purchase {
+          padding: 0.5rem 1.5rem;
+          color: $white;
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+          cursor: pointer;
+
+          .bi-cart-fill {
+            margin-right: 10px;
+          }
+
+          @include flex-center(row);
+
+          background-color: $primary-color;
         }
       }
     }
