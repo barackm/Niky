@@ -1,0 +1,207 @@
+#navigation-bar {
+    width: 100%;
+    height: 60px;
+    background-color: $dark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    @include flex-between(row);
+    .logo-container {
+    padding-left: 1rem;
+        a{
+            color: lighten($dark-light, 20%);
+            #home-logo {
+                margin-top: .4rem;
+                width:5rem;
+            } 
+        } 
+    }
+    .hamburger-menu {
+    padding-right: 1rem;
+        @include flex-center(row);
+        i {
+            color: $primary-color;
+            font-size: 2rem
+        }
+
+        .user-profile-image {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .cart-details {
+            position: relative;
+            margin-right: 20px;
+            .cart-badge {
+                right: -7px;
+                position: absolute;
+                @include flex-center(row);
+                width: 18px;
+                height: 18px;
+                border: 1px solid $dark;
+                border-radius: 50%;
+                background-color: $primary-color;
+                font-size: 0.6rem;
+                font-weight: bold;
+                color: $white;
+            }
+        }
+    }
+    ul {
+        @include flex-center(row);
+        display: none;
+        li{
+            padding: 0 0.5rem;
+            a{
+                color: lighten($dark-light, 20%);
+                #home-logo {
+                    margin-top: .4rem;
+                    width:5rem;
+                } 
+
+                i {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .post-btn {
+        display: none;
+    }
+}
+
+#home-main-area {
+    width: 100%;
+    background-color: lighten($dark-light, 40%);
+    padding-top: 60px;
+    .header-jumbotron {
+        width: 100%;
+        // background-color: lighten($primary-color, 5%);
+    }
+    .products-main-area {
+        width: 100%;
+        @include flex-center(column);
+        .hats-main-area {
+            width: 100%;
+            @include flex-center(column);
+            margin-bottom: 70px;
+            .hat-product-header {
+                border-bottom: $border;
+                @include flex-between(row);
+                width: 95%;
+                margin-bottom: 10px;
+                .product-header-titles {
+                    @include flex-center(row);
+                    .hat-icon-container {
+                        i {
+                            font-size: 2rem;
+                            color: darken($dark-light, 10%)
+                        }
+                    }
+                    .product-types {
+                        @include flex-center(row);
+                        .products-title {
+                            @include subtitle-title($dark);
+                            font-weight: 900;
+                            margin: 0 10px;
+                        }
+                        p{
+                            @include paragraph($dark-light);
+                            font-size: 14px
+                        }
+                    }
+                }
+                .see-more-btn {
+                    @include subtitle-title($primary-color);
+                    font-size: 12px;
+                    font-family: "Helvetica Neue LT Bold";
+                    display: none;
+                }
+                
+            }
+
+            .hats-products-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 15px;
+                margin-top: 10px;
+                width: 95%;
+
+                @include media-queries($small-phone){
+                // grid-template-columns: repeat(1, 1fr);
+                }
+                .hat-item-main-container {
+                    background-color: $white;
+                    border: $border;
+                    width: 100%;
+                    border-radius: 3px;
+                    .product-image{
+                        width: 100%;
+                        height:15rem;
+                        // *zoom: 1;
+                        @include flex-center(row);
+                        flex: 1;
+                        img {
+                            width: 80%;
+                            height: 80%;
+                        }
+                    }
+                    .product-details {
+                        padding: 15px;
+                        .product-name {
+                            @include subtitle-title(lighten($dark, 20%));
+                            margin-bottom: -1rem;
+                        }
+                        .number-in-stock {
+                            @include paragraph($dark-light);
+                            font-size: 14px;
+                            span {
+                                color: $primary-color;
+                                font-weight: bold;
+                                font-family: "Helvetica Neue LT Bold"
+                            }
+                        }
+                        .product-status{
+                            @include subtitle-title($primary-color);
+                            line-height: 1;
+                            font-size: 16px;
+                            font-weight: bold;
+                            margin-bottom: -1rem;
+                        }
+                        .product-price-options {
+                          @include flex-between(row);
+                          .products-options {
+                              @include flex-center(row);
+                              width: 1.6rem;
+                              height: 1.6rem;;
+                              border:  $border;
+                              i{
+                                  font-size: 1.4rem;
+                                  color: $dark-light;
+                              }
+
+
+                          }
+                          .product-price {
+                              .price-prod {
+                                color: $primary-color;
+                                font-weight: bold;
+                                font-family: "Helvetica Neue LT Bold";
+                                letter-spacing: .1rem; 
+                              }
+                          }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

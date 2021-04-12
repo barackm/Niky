@@ -1,5 +1,20 @@
-@import url(./_fonts.scss);
-@import url(./_initialisation.scss);
-@import url(./_colors.scss);
-@import url(./_variables.scss);
-@import url(./_mixins.scss);
+@font-face {
+    font-family: "Helvetica Neue LT Light";
+    src: url(../fonts/Helvetica-Light.woff);
+}
+
+@font-face {
+    font-family: "Helvetica Neue LT Medium";
+    src: url(../fonts/Helvetica-medium.woff);
+}
+
+@font-face {
+    font-family: "Helvetica Neue LT Bold";
+    src: url(../fonts/Helvetica-Bold.woff);
+}
+
+@import "./_initialisation.scss";
+@import "./_colors.scss";
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./pages/home"

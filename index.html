@@ -8,15 +8,370 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-    />
+    <script
+      src="https://kit.fontawesome.com/ed034ca223.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/css/main.css" />
 
     <title>Niky</title>
   </head>
   <body>
-    <h1>Niky shop</h1>
+    <!-- header  -->
+    <header>
+      <nav id="navigation-bar">
+        <div class="logo-container">
+          <a href="#">
+            <svg
+              id="home-logo"
+              viewBox="0 0 247 121"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M149.868 30.5433L165.183 59.3608V30.5433H172.569V77.485H166.679L147.693 41.4631V77.485H140.353V30.5433H149.868ZM186.071 77.485H179.456V44.7708H186.071V77.485ZM186.525 41.9162H179.003V34.3947H186.525V41.9162ZM200.072 77.485H193.457V30.5433H200.072V56.9593L209.497 44.7708H217.562L208.092 56.8687L218.106 77.485H210.63L203.471 62.7137L200.072 67.0182V77.485ZM229.298 75.4913L218.333 44.7708H225.718L232.56 64.3902L238.722 44.7708H246.063L235.188 78.4365C234.101 81.8499 233.194 84.0852 232.469 85.1424C231.744 86.2299 231.08 87.0757 230.476 87.6798C229.902 88.3142 229.267 88.8126 228.573 89.1751C226.398 90.3834 223.196 90.6703 218.967 90.036C218.786 90.0058 218.695 89.9907 218.695 89.9907L219.012 83.8284C219.767 84.1607 220.779 84.3269 222.048 84.3269C223.286 84.3269 224.283 84.1607 225.038 83.8284C225.794 83.4962 226.398 83.0733 226.851 82.5597C227.334 82.0462 227.742 81.4723 228.074 80.8379C228.376 80.2338 228.618 79.5995 228.799 78.9349C229.101 77.6964 229.267 76.5485 229.298 75.4913Z"
+                fill="#D35266"
+              />
+              <path
+                d="M60.0465 120.093C93.2109 120.093 120.093 93.2109 120.093 60.0465C120.093 26.8821 93.2109 0 60.0465 0C26.8821 0 0 26.8821 0 60.0465C0 93.2109 26.8821 120.093 60.0465 120.093ZM55.6068 24.0974H63.1126V57.4457H96.4647V64.9515H55.6068V24.0974ZM33.2432 25.7374H40.749V79.3402H94.3518V86.846H33.2432V25.7374V25.7374Z"
+                fill="#D35266"
+              />
+            </svg>
+          </a>
+        </div>
+        <ul>
+          <li></li>
+          <li>
+            <a href="#"><i class="bi bi-house-fill"></i> HOME</a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-collection-fill"></i> COLLECTION</a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-cart-fill"></i>PRODUCTS</a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="post-btn">POST</div>
+            </a>
+          </li>
+        </ul>
+        <div class="hamburger-menu">
+          <div class="cart-details">
+            <div class="cart-badge">5</div>
+            <a href="#"><i class="bi bi-cart-fill"></i> </a>
+          </div>
+          <div class="user-details">
+            <div class="user-profile-image">
+              <a href="#">
+                <img
+                  src="https://media-exp1.licdn.com/dms/image/C4E03AQFAmWzxSCzWdw/profile-displayphoto-shrink_800_800/0/1606656499583?e=1623888000&v=beta&t=sHzDJf0Uxa7G2iIrysj7rH0DzMO9Wmvpp69aRd0x8gY"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <i class="bi bi-list"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home-main-area">
+      <section class="header-jumbotron"></section>
+      <section class="products-main-area">
+        <div class="hats-main-area">
+          <div class="hat-product-header">
+            <div class="product-header-titles">
+              <div class="hat-icon-container">
+                <i class="fab fa-redhat"></i>
+                <!-- <i class="fab fa-shoe-prints"></i> -->
+              </div>
+              <div class="product-types">
+                <h1 class="products-title">Shoes</h1>
+                <p>( Nike, Jordan, Versas )</p>
+              </div>
+            </div>
+            <a href="#" class="see-more-btn">See more</a>
+          </div>
+          <div class="hats-products-grid">
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/shoes/img4.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/shoes/img5.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/shoes/img6.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/shoes/img7.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hats-main-area">
+          <div class="hat-product-header">
+            <div class="product-header-titles">
+              <div class="hat-icon-container">
+                <i class="fab fa-redhat"></i>
+                <!-- <i class="fab fa-shoe-prints"></i> -->
+              </div>
+              <div class="product-types">
+                <h1 class="products-title">Shoes</h1>
+                <p>(Lorem, ipsum, dolor, sit, amet, consectetur, lorem )</p>
+              </div>
+            </div>
+            <a href="#" class="see-more-btn">See more</a>
+          </div>
+          <div class="hats-products-grid">
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/hats/img1.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/hats/img10.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/hats/img3.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/hats/img6.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hats-main-area">
+          <div class="hat-product-header">
+            <div class="product-header-titles">
+              <div class="hat-icon-container">
+                <i class="fab fa-redhat"></i>
+                <!-- <i class="fab fa-shoe-prints"></i> -->
+              </div>
+              <div class="product-types">
+                <h1 class="products-title">Shoes</h1>
+                <p>(Lorem, ipsum, dolor, sit, amet, consectetur, lorem )</p>
+              </div>
+            </div>
+            <a href="#" class="see-more-btn">See more</a>
+          </div>
+          <div class="hats-products-grid">
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/t-shirts/img1.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/t-shirts/img2.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/t-shirts/img3.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hat-item-main-container">
+              <div class="product-image">
+                <img src="./assets/images/t-shirts/img4.png" alt="" srcset="" />
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">Nike Air VaporMax 2020</h3>
+                <h4 class="product-status">Used</h4>
+                <h5 class="number-in-stock">
+                  Number in stock: <span>30</span>
+                </h5>
+                <div class="product-price-options">
+                  <div class="products-options">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-prod"> $50 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
