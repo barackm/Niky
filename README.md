@@ -49,4 +49,4 @@ Give a ⭐️ if you like this project!❤️❤️❤️
 
 ## Acknowledgments
 
-- [Mohammed Awad on Behance](https://www.behance.net/M_Awad)
+- Design and inspiration by [Mohammed Awad on Behance](https://www.behance.net/M_Awad)
