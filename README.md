@@ -13,6 +13,7 @@ This website was designed with the tools below:
 - HTML
 - CSS Grid
 - CSS Flexbox
+- SASS
 
 ## Live Demo
 
