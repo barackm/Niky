@@ -258,7 +258,7 @@
   }
 
   @include media-queries($desktop) {
-    margin-right: 5rem !important;
+    margin-right: 3rem !important;
 
     .search-result-items-wrapper {
       flex: 1;
@@ -345,7 +345,7 @@
       position: absolute;
 
       .aside-content-area {
-        padding-left: 5rem;
+        padding-left: 4rem;
         padding-top: 2rem;
         padding-right: 1rem;
         width: 100%;
