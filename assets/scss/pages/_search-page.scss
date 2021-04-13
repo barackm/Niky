@@ -1,0 +1,301 @@
+.sidebar-main-content {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  border-right: $border;
+  border-left: $border;
+  position: relative;
+
+  .search-header {
+    display: flex;
+    align-items: center;
+    border-bottom: $border;
+
+    .search-hamburger {
+      margin-right: 0.3rem;
+      margin-left: 0.3rem;
+
+      i {
+        font-size: 30px;
+      }
+    }
+
+    .search-query {
+      font-size: 14px;
+    }
+  }
+
+  .search-result-items-wrapper {
+    padding: 20px 20px;
+
+    .search-result-item-container {
+      //   background-color: $white;
+      border: $border;
+      margin-bottom: 20px;
+
+      .result-item-image-wrapper {
+        height: 16rem;
+
+        @include flex-center(row);
+
+        .search-img {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          .search-result-chevron-container {
+            position: absolute;
+            z-index: 99;
+            color: $primary-color;
+            bottom: 0;
+            right: 0;
+            display: flex;
+
+            .left-chevron-result {
+              width: 30px;
+              height: 25px;
+              color: $primary-color;
+              cursor: pointer;
+              border-right: 1px solid $dark;
+
+              @include flex-center(row);
+
+              &:hover {
+                background-color: lighten($dark, 10%);
+              }
+
+              background-color: $dark;
+            }
+
+            .right-chevron-result {
+              width: 30px;
+              height: 25px;
+              color: $primary-color;
+              cursor: pointer;
+              border-right: 1px solid $dark;
+
+              @include flex-center(row);
+
+              &:hover {
+                background-color: lighten($dark, 10%);
+              }
+
+              background-color: $dark;
+            }
+          }
+
+          @include flex-center(row);
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &.second {
+        background-color: $white;
+      }
+
+      .search-result-details {
+        padding: 0 20px;
+
+        .result-content-details {
+          .result-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1.2;
+            /* stylelint-disable */
+            font-family: Helvetica Neue LT Bold;
+            color: rgba($color: $dark, $alpha: 0.9);
+            /* stylelint-enable */
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+
+          .result-price {
+            /* stylelint-disable */
+            font-family: Helvetica Neue LT Bold;
+            /* stylelint-enable */
+            color: $primary-color;
+            letter-spacing: 0.1rem;
+            margin-bottom: -0.7rem;
+          }
+
+          .result-details {
+            color: rgba($color: $dark, $alpha: 0.6);
+            font-size: 1rem;
+            margin-bottom: -0.7rem;
+          }
+
+          .result-number-in-stock {
+            margin-bottom: -0.4rem;
+
+            strong {
+              /* stylelint-disable */
+              font-family: Helvetica Neue LT Bold;
+              color: $primary-color;
+              /* stylelint-enable */
+            }
+          }
+        }
+
+        .result-history-actions {
+          @include flex-between(row);
+
+          .result-action-btn {
+            @include flex-center(row);
+
+            .price-btn {
+              background-color: $primary-color;
+              color: $white;
+              font-size: 12px;
+
+              &:hover {
+                background-color: lighten($primary-color, 5%);
+              }
+
+              &.call {
+                margin-right: 10px;
+              }
+
+              @include flex-center(row);
+
+              padding: 0.3rem 1rem;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #search-page-sidebar {
+    display: none;
+  }
+
+  @include media-queries($tablet) {
+    margin-left: 0;
+
+    .search-result-item-container {
+      display: flex;
+      height: auto;
+      overflow: hidden;
+      background-color: transparent;
+
+      .result-item-image-wrapper {
+        display: flex;
+        width: 30%;
+        height: 13rem !important;
+      }
+
+      .search-result-details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+
+        .result-content-details {
+          .result-title {
+            margin-top: 5px;
+          }
+        }
+
+        .result-history-actions {
+          padding-bottom: 15px;
+
+          .result-date {
+            .result-date-p {
+              margin-bottom: 0;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-queries($desktop) {
+    .search-result-items-wrapper {
+      flex: 1;
+      padding: 0;
+      margin-bottom: 60px;
+      margin-left: 25%;
+
+      .search-result-item-container {
+        border: none;
+        border-top: $border;
+        border-bottom: $border;
+        padding: 10px 0;
+        margin-top: 10px;
+        padding-left: 15px;
+        background-color: transparent;
+
+        .result-item-image-wrapper {
+          height: 100%;
+          width: 30%;
+        }
+
+        .search-result-details {
+          .result-content-details {
+            .result-title {
+              font-size: 1.2rem;
+              line-height: 1.2;
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+          }
+
+          .result-history-actions {
+            .result-action-btn {
+              .price-btn {
+                padding: 0.5rem 1rem;
+                border-radius: 3px;
+                font-size: 14px;
+                font-weight: bold;
+              }
+            }
+
+            .result-date {
+              .result-date-p {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .search-header {
+      padding-left: 15px;
+      margin-left: 25%;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      margin-bottom: 10px;
+
+      .search-hamburger {
+        display: none;
+      }
+    }
+
+    margin-right: 2rem;
+
+    #search-page-sidebar {
+      display: flex;
+      width: 25%;
+      left: 0;
+      height: 100%;
+      top: 0;
+      border-right: $border;
+      position: absolute;
+    }
+  }
+}
