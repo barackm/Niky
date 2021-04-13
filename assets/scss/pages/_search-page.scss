@@ -102,6 +102,37 @@
         padding: 0 20px;
 
         .result-content-details {
+          .result-title-actions {
+            @include flex-between(row);
+
+            .result-plus-actions {
+              @include flex-center(row);
+
+              margin-top: 1rem;
+              width: 1.6rem;
+              height: 1.6rem;
+              border: $border;
+              cursor: pointer;
+
+              i {
+                font-size: 1.4rem;
+                color: $dark-light;
+              }
+
+              &:hover {
+                background-color: $dark;
+                color: $primary-color;
+                border-color: transparent;
+
+                i {
+                  color: $primary-color;
+                }
+              }
+            }
+
+            align-items: flex-start;
+          }
+
           .result-title {
             font-weight: bold;
             font-size: 1.2rem;
@@ -200,6 +231,12 @@
         justify-content: space-between;
         height: auto;
 
+        .result-title-actions {
+          .result-plus-actions {
+            margin-top: 0 !important;
+          }
+        }
+
         .result-content-details {
           .result-title {
             margin-top: 5px;
@@ -251,6 +288,12 @@
               line-height: 1.2;
               margin-top: 0;
               margin-bottom: 0;
+            }
+
+            .result-title-actions {
+              .result-plus-actions {
+                margin-top: 0;
+              }
             }
           }
 
@@ -317,6 +360,17 @@
           margin-right: 15px;
           margin-bottom: 0.5rem;
 
+          input[type="number"] {
+            border: $border;
+            height: 20px;
+            margin-left: 15px;
+            width: 50px;
+            text-align: center;
+            margin-top: -10px;
+
+            @include flex-center(row);
+          }
+
           .aside-check-container {
             position: relative;
             padding-left: 35px;
@@ -368,16 +422,6 @@
               &:checked ~ .aside-checkmark::after {
                 display: block;
               }
-            }
-
-            input[type="number"] {
-              border: $border;
-              height: 20px;
-              margin-left: 15px;
-              width: 50px;
-              text-align: center;
-
-              @include flex-center(row);
             }
           }
         }

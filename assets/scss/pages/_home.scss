@@ -504,6 +504,7 @@
       }
 
       .hats-products-grid {
+        /* stylelint-disable */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 15px;
@@ -513,7 +514,7 @@
         @include media-queries($tablet) {
           grid-template-columns: repeat(4, 1fr);
         }
-
+        /* stylelint-enable */
         .hat-item-main-container {
           background-color: $white;
           border: $border;
@@ -591,6 +592,15 @@
                 i {
                   font-size: 1.4rem;
                   color: $dark-light;
+                }
+
+                &:hover {
+                  background-color: $dark;
+                  border-color: transparent;
+
+                  i {
+                    color: $primary-color;
+                  }
                 }
               }
 
@@ -1114,9 +1124,10 @@
   }
 
   .footer-upper-links-main-container {
+    /* stylelint-disable */
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-
+    /* stylelint-enable */
     .website-details {
       @include flex-center(column);
 
@@ -1245,8 +1256,9 @@
 
   @include media-queries($tablet) {
     .footer-upper-links-main-container {
+      /* stylelint-disable */
       grid-template-columns: repeat(3, 1fr);
-
+      /* stylelint-enable */
       .website-details {
         padding: 1rem 1rem;
       }
@@ -1267,8 +1279,9 @@
 
   @include media-queries($desktop) {
     .footer-upper-links-main-container {
+      /* stylelint-disable */
       grid-template-columns: 30% 30% 20% 20%;
-
+      /* stylelint-enable */
       .website-details {
         padding: 1rem 1rem;
       }
