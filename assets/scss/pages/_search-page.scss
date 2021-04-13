@@ -406,3 +406,43 @@
     }
   }
 }
+
+.search-result-pagination {
+  @include flex-center(row);
+
+  width: 100%;
+
+  .page-numbers {
+    @include flex-center(row);
+
+    margin-top: 20px;
+
+    .page-item {
+      padding: 0.2rem 0.5rem;
+      border: $border;
+      margin: 0 6px;
+      cursor: pointer;
+      font-size: 14px;
+
+      &:nth-child(2) {
+        background-color: $primary-color;
+        color: $white;
+        border-color: transparent;
+        /* stylelint-disable */
+        font-family: "Helvetica Neue LT Bold";
+        /* stylelint-enable */
+      }
+
+      &:hover {
+        background-color: $primary-color;
+        color: $white;
+        border-color: transparent;
+        /* stylelint-disable */
+        font-family: "Helvetica Neue LT Bold";
+        /* stylelint-enable */
+      }
+
+      @include flex-center(row);
+    }
+  }
+}
