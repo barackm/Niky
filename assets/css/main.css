@@ -1719,7 +1719,7 @@ select {
   margin-bottom: 10px;
 }
 
-#footer-container-area .footer-upper-links-main-container .categories-main-area .category-header h1 {
+#footer-container-area .footer-upper-links-main-container .categories-main-area .category-header h2 {
   line-height: 1;
   margin-bottom: 0.6rem;
   /* stylelint-disable */
@@ -1793,7 +1793,7 @@ select {
   text-align: right;
 }
 
-#footer-container-area .footer-upper-links-main-container .website-language-details .country-detail .country-name h1 {
+#footer-container-area .footer-upper-links-main-container .website-language-details .country-detail .country-name h2 {
   line-height: 1;
   margin-bottom: 0.6rem;
   /* stylelint-disable */
