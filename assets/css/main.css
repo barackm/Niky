@@ -13,6 +13,10 @@
   src: url(../fonts/Helvetica-Bold.woff);
 }
 
+:root {
+  --flex-display: flex;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -55,6 +59,12 @@ select {
   outline: none;
 }
 
+.flex-center {
+  display: var(--flex-display);
+  justify-content: center;
+  align-items: center;
+}
+
 .navigation-bar {
   width: 100%;
   height: 60px;
@@ -64,7 +74,7 @@ select {
   left: 0;
   overflow-x: hidden;
   z-index: 9999;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -78,7 +88,7 @@ select {
 }
 
 .navigation-bar .navbar-items {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -183,7 +193,7 @@ select {
 
 .navigation-bar .hamburger-menu {
   padding-right: 1rem;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -212,7 +222,7 @@ select {
 .navigation-bar .hamburger-menu .cart-details .cart-badge {
   right: -7px;
   position: absolute;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -267,7 +277,7 @@ select {
   background-color: #d35266;
   color: #fff;
   font-size: 12px;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -288,7 +298,7 @@ select {
 
 @media screen and (min-width: 768px) {
   .navigation-bar ul {
-    display: flex;
+    display: var(--flex-display);
   }
 }
 
@@ -300,7 +310,7 @@ select {
 }
 
 .navigation-bar .user-details-main-container .messages {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -318,7 +328,7 @@ select {
   right: -7px;
   position: absolute;
   top: 0;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -340,7 +350,7 @@ select {
 }
 
 .navigation-bar .user-details-main-container .user {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -379,7 +389,7 @@ select {
   }
 
   .navigation-bar .user-details-main-container {
-    display: flex;
+    display: var(--flex-display);
     margin-right: 1rem;
   }
 }
@@ -422,7 +432,7 @@ select {
   z-index: 9;
   width: 100%;
   margin-top: 20px;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -453,7 +463,7 @@ select {
 
 .home-main-area .header-jumbotron .jumbotron-content .jumbotron-inputs {
   width: 70%;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -477,7 +487,7 @@ select {
 .home-main-area .header-jumbotron .jumbotron-content .jumbotron-inputs .search-two-header {
   flex: 1;
   height: 1.9rem;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -505,7 +515,7 @@ select {
   flex: 1;
   height: 1.9rem;
   border-left: 1px solid #d35266;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -528,7 +538,7 @@ select {
   height: 100%;
   font-size: 14px;
   text-align: center;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -582,7 +592,7 @@ select {
 
   .home-main-area .header-jumbotron .jumbotron-content .jumbotron-inputs {
     width: 80%;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -596,7 +606,7 @@ select {
   }
 
   .home-main-area .header-jumbotron .jumbotron-content .jumbotron-inputs .categories-header {
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -611,7 +621,7 @@ select {
   }
 
   .home-main-area .header-jumbotron .jumbotron-content .jumbotron-inputs .search-one-header {
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-flex: 2;
     -ms-flex: 2;
     flex: 2;
@@ -634,7 +644,7 @@ select {
     -ms-flex: 2;
     flex: 2;
     height: 1.9rem;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -662,7 +672,7 @@ select {
     flex: 1;
     height: 1.9rem;
     border-left: 1px solid #d35266;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -686,7 +696,7 @@ select {
     font-size: 14px;
     text-align: center;
     margin-left: 10px;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -706,7 +716,7 @@ select {
 @media screen and (min-width: 1024px) {
   .home-main-area .header-jumbotron {
     height: 300px;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -726,7 +736,7 @@ select {
 
   .home-main-area .header-jumbotron .jumbotron-content .jumbotron-inputs {
     width: 80%;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -758,7 +768,7 @@ select {
 
 .home-main-area .products-main-area {
   width: 100%;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -773,7 +783,7 @@ select {
 
 .home-main-area .products-main-area .hats-main-area {
   width: 100%;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -789,7 +799,7 @@ select {
 
 .home-main-area .products-main-area .hats-main-area .hat-product-header {
   border-bottom: 1px solid #ccc;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -805,7 +815,7 @@ select {
 }
 
 .home-main-area .products-main-area .hats-main-area .hat-product-header .product-header-titles {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -819,7 +829,7 @@ select {
 }
 
 .home-main-area .products-main-area .hats-main-area .hat-product-header .product-header-titles .product-types {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -884,12 +894,43 @@ select {
   border: 1px solid #ccc;
   width: 100%;
   border-radius: 3px;
+  position: relative;
+}
+
+.next-btn-container {
+  position: absolute;
+  height: 100%;
+  width: 5rem;
+  left: -6rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(56, 56, 56, 0.2);
+  display: none;
+}
+
+.next-btn-container .fa-chevron-left {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.next-btn-container.right {
+  right: -6rem;
+  left: auto;
+}
+
+.next-btn-container.right .fa-chevron-right {
+  left: 1rem;
+  position: absolute;
+  right: 1rem;
+  font-size: 1.3rem;
+  color: #000;
 }
 
 .home-main-area .products-main-area .hats-main-area .hats-products-grid .hat-item-main-container .product-image {
   width: 100%;
   height: 14rem;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -961,8 +1002,8 @@ select {
   margin-bottom: -1rem;
 }
 
-.home-main-area .products-main-area .hats-main-area .hats-products-grid .hat-item-main-container .product-details .product-price-options {
-  display: flex;
+.product-price-options {
+  display: var(--flex-display);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -976,7 +1017,7 @@ select {
 }
 
 .home-main-area .products-main-area .hats-main-area .hats-products-grid .hat-item-main-container .product-details .product-price-options .products-options {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1051,7 +1092,7 @@ select {
 .hot-ads-main-container .hot-add-content-area {
   margin-left: 8rem;
   margin-right: 8rem;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -1073,7 +1114,7 @@ select {
   right: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1087,7 +1128,7 @@ select {
 }
 
 .hot-ads-main-container .hot-add-content-area .image-wrapper .hot-control-btn .controls {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1111,7 +1152,7 @@ select {
   color: #d35266;
   cursor: pointer;
   border-right: 1px solid #383838;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1134,7 +1175,7 @@ select {
   height: 25px;
   color: #d35266;
   cursor: pointer;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1168,7 +1209,7 @@ select {
   flex: 1;
   padding-left: 20px;
   height: 100%;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1225,7 +1266,7 @@ select {
 }
 
 .hot-ads-main-container .hot-add-content-area .hot-ad-details .hot-btn-container {
-  display: flex;
+  display: var(--flex-display);
   /* stylelint-disable */
   font-family: "Helvetica Neue LT Medium";
   /* stylelint-enable */
@@ -1239,7 +1280,7 @@ select {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   cursor: pointer;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1262,7 +1303,7 @@ select {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   cursor: pointer;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1290,7 +1331,7 @@ select {
   height: 100%;
   top: 0;
   left: 0;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1311,7 +1352,7 @@ select {
   border: 0.1rem solid #d35266;
   cursor: pointer;
   z-index: 999;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1346,7 +1387,7 @@ select {
   border: 0.1rem solid #d35266;
   cursor: pointer;
   z-index: 999;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1439,7 +1480,7 @@ select {
   .hot-ads-main-container .hot-add-content-area {
     margin-left: 0;
     margin-right: 0;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1466,7 +1507,7 @@ select {
     right: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1480,7 +1521,7 @@ select {
   }
 
   .hot-ads-main-container .hot-add-content-area .image-wrapper .hot-control-btn .controls {
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1504,7 +1545,7 @@ select {
     color: #fff;
     cursor: pointer;
     border-right: 1px solid #383838;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1523,7 +1564,7 @@ select {
     height: 25px;
     color: #fff;
     cursor: pointer;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1559,7 +1600,7 @@ select {
   }
 
   .hot-ads-main-container .hot-add-content-area .hot-content {
-    display: flex;
+    display: var(--flex-display);
     width: 80%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1581,7 +1622,7 @@ select {
   width: 100%;
   background-color: #fff;
   border-top: 1px solid #ccc;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1597,7 +1638,7 @@ select {
 .footer-container-area .footer-copyright-area {
   border-top: 1px solid #ccc;
   width: 100%;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1625,7 +1666,7 @@ select {
 .footer-container-area .footer-copyright-area .footer-social-media-icons {
   margin-right: 15px;
   margin-left: 0.4rem;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1639,7 +1680,7 @@ select {
 }
 
 .footer-container-area .footer-copyright-area .footer-social-media-icons ul {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1677,7 +1718,7 @@ select {
 }
 
 .footer-container-area .footer-upper-links-main-container .website-details {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1733,7 +1774,7 @@ select {
 }
 
 .footer-container-area .footer-upper-links-main-container .categories-main-area .categories-container {
-  display: flex;
+  display: var(--flex-display);
 }
 
 .footer-container-area .footer-upper-links-main-container .categories-main-area .categories-container .categories-left {
@@ -1768,7 +1809,7 @@ select {
 
 .footer-container-area .footer-upper-links-main-container .website-language-details {
   margin-top: 30px;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1778,7 +1819,7 @@ select {
 }
 
 .footer-container-area .footer-upper-links-main-container .website-language-details .country-detail {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1815,7 +1856,7 @@ select {
   width: 7rem;
   height: 1.5rem;
   border-radius: 3px;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1878,7 +1919,7 @@ select {
 }
 
 .sidebar-main-content {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1890,7 +1931,7 @@ select {
 }
 
 .sidebar-main-content .search-header {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1917,7 +1958,7 @@ select {
 
 .sidebar-main-content .search-result-items-wrapper .search-result-item-container .result-item-image-wrapper {
   height: 16rem;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1934,7 +1975,7 @@ select {
   width: 100%;
   height: 100%;
   position: relative;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1953,7 +1994,7 @@ select {
   color: #d35266;
   bottom: 0;
   right: 0;
-  display: flex;
+  display: var(--flex-display);
 }
 
 .sidebar-main-content .search-result-items-wrapper .search-result-item-container .result-item-image-wrapper .search-img .search-result-chevron-container .left-chevron-result {
@@ -1962,7 +2003,7 @@ select {
   color: #d35266;
   cursor: pointer;
   border-right: 1px solid #383838;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1986,7 +2027,7 @@ select {
   color: #d35266;
   cursor: pointer;
   border-right: 1px solid #383838;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2013,7 +2054,7 @@ select {
 }
 
 .sidebar-main-content .search-result-items-wrapper .search-result-item-container .search-result-details .result-content-details .result-title-actions {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-box-orient: horizontal;
@@ -2026,7 +2067,7 @@ select {
 }
 
 .sidebar-main-content .search-result-items-wrapper .search-result-item-container .search-result-details .result-content-details .result-title-actions .result-plus-actions {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2091,7 +2132,7 @@ select {
 }
 
 .sidebar-main-content .search-result-items-wrapper .search-result-item-container .search-result-details .result-history-actions {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -2105,7 +2146,7 @@ select {
 }
 
 .sidebar-main-content .search-result-items-wrapper .search-result-item-container .search-result-details .result-history-actions .result-action-btn {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2122,7 +2163,7 @@ select {
   background-color: #d35266;
   color: #fff;
   font-size: 12px;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2159,11 +2200,11 @@ select {
   }
 
   .hot-ads-main-container {
-    display: flex;
+    display: var(--flex-display);
   }
 
   .sidebar-main-content .search-result-item-container {
-    display: flex;
+    display: var(--flex-display);
     height: auto;
     overflow: hidden;
     background-color: transparent;
@@ -2171,7 +2212,7 @@ select {
   }
 
   .sidebar-main-content .search-result-item-container .result-item-image-wrapper {
-    display: flex;
+    display: var(--flex-display);
     width: 30%;
     height: 13rem !important;
   }
@@ -2180,7 +2221,7 @@ select {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2206,6 +2247,10 @@ select {
   .sidebar-main-content .search-result-item-container .search-result-details .result-history-actions .result-date .result-date-p {
     margin-bottom: 0;
     margin-top: 0;
+  }
+
+  .next-btn-container {
+    display: none;
   }
 }
 
@@ -2279,7 +2324,7 @@ select {
   }
 
   .sidebar-main-content .search-page-sidebar {
-    display: flex;
+    display: var(--flex-display);
     width: 25%;
     left: 0;
     height: 100%;
@@ -2296,11 +2341,11 @@ select {
   }
 
   .sidebar-main-content .search-page-sidebar .aside-content-area .aside-header {
-    display: flex;
+    display: var(--flex-display);
   }
 
   .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container {
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -2322,7 +2367,7 @@ select {
     width: 50px;
     text-align: center;
     margin-top: -10px;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -2347,7 +2392,7 @@ select {
     user-select: none;
     color: rgba(56, 56, 56, 0.7);
     font-weight: 900;
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -2394,16 +2439,16 @@ select {
     width: 0;
   }
 
-  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked ~ .aside-checkmark {
+  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked~.aside-checkmark {
     background-color: #d35266;
   }
 
-  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked ~ .aside-checkmark::after {
+  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked~.aside-checkmark::after {
     display: block;
   }
 
   .sidebar-main-content .search-page-sidebar .aside-content-area .aside-checkbox-group {
-    display: flex;
+    display: var(--flex-display);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2430,7 +2475,7 @@ select {
 }
 
 .search-result-pagination {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2445,7 +2490,7 @@ select {
 }
 
 .search-result-pagination .page-numbers {
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2465,7 +2510,7 @@ select {
   margin: 0 6px;
   cursor: pointer;
   font-size: 14px;
-  display: flex;
+  display: var(--flex-display);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
