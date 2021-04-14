@@ -2439,11 +2439,11 @@ select {
     width: 0;
   }
 
-  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked~.aside-checkmark {
+  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked ~ .aside-checkmark {
     background-color: #d35266;
   }
 
-  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked~.aside-checkmark::after {
+  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked ~ .aside-checkmark::after {
     display: block;
   }
 
