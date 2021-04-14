@@ -403,6 +403,7 @@ select {
 .home-main-area {
   width: 100%;
   background-color: #eee;
+  padding-top: 4rem;
 }
 
 .home-main-area .header-jumbotron {
@@ -414,6 +415,7 @@ select {
   background-size: cover;
   position: relative;
   z-index: 99;
+  display: none !important;
 }
 
 .home-main-area .header-jumbotron .jumbotron-content {
@@ -559,13 +561,14 @@ select {
 @media screen and (min-width: 768px) {
   .home-main-area .header-jumbotron {
     height: 270px;
-    display: flex;
+    display: flex !important;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
+    padding-top: 0;
   }
 
   .home-main-area .header-jumbotron .jumbotron-content {
@@ -1020,7 +1023,7 @@ select {
 
 .hot-ads-main-container {
   background-color: #fff;
-  display: flex;
+  display: none;
   width: 100%;
   border-bottom: 1px solid #ccc;
   -webkit-box-orient: vertical;
@@ -2147,8 +2150,16 @@ select {
 }
 
 @media screen and (min-width: 768px) {
+  .home-main-area {
+    padding-top: 0;
+  }
+
   .sidebar-main-content {
     margin-left: 0;
+  }
+
+  .hot-ads-main-container {
+    display: flex;
   }
 
   .sidebar-main-content .search-result-item-container {
@@ -2383,11 +2394,11 @@ select {
     width: 0;
   }
 
-  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked ~ .aside-checkmark {
+  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked~.aside-checkmark {
     background-color: #d35266;
   }
 
-  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked ~ .aside-checkmark::after {
+  .sidebar-main-content .search-page-sidebar .aside-content-area .aside-check-box-container .aside-check-container input[type="checkbox"]:checked~.aside-checkmark::after {
     display: block;
   }
 
