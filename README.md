@@ -21,7 +21,9 @@ This website was designed with the tools below:
 
 ## Getting Started
 
-**If you want to know more about how this website was designed, you can just copy the link of the repository and clone it into your local computer. then open the folder in your preferred editor. Open the index.html file with chrome or the live server extension if you are using VScode.**
+**If you want to know more about how this website was designed, You can run the folowing commands in your terminal if you have git already install on your computer.**
+
+`git clone https://github.com/barackm/Niky/`
 
 To track all the linter errors you can run the following command at the root of your project if you have NPM installed on your computer.
 
