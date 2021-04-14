@@ -1,0 +1,39 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* stylelint-disable */
+  font-family: "Helvetica Neue LT Light";
+  /* stylelint-enable */
+  transition: $transition;
+  outline: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border-radius: 0;
+  outline: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+select {
+  outline: none;
+}

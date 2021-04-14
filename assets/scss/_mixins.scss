@@ -1,0 +1,61 @@
+/* stylelint-disable */
+// Typography
+@mixin title($color) {
+  font-size: 1.4rem;
+  font-family: Helvetica Neue LT Bold;
+}
+
+@mixin subtitle-title($color) {
+  font-size: 1rem;
+  line-height: 1;
+  color: $color;
+  font-weight: 800;
+}
+
+@mixin paragraph($color) {
+  font-size: 0.9rem;
+  color: $color;
+}
+
+// flexbox
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-between($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-end($direction) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-start($direction) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// media queries
+
+@mixin media-queries-max-width($screen) {
+  @media screen and(max-width: $screen) {
+    @content;
+  }
+}
+
+@mixin media-queries($screen) {
+  @media screen and(min-width: $screen) {
+    @content;
+  }
+}
