@@ -2211,7 +2211,7 @@ select {
 
 @media screen and (min-width: 1024px) {
   .sidebar-main-content {
-    margin-right: 3rem !important;
+    /* margin-right: 3rem !important; */
     margin-right: 2rem;
   }
 
